@@ -47,6 +47,7 @@
     jetbrains.idea-community
     vscode
     ungoogled-chromium
+    nextcloud-client
 
   ];
 
