@@ -39,15 +39,15 @@
     git
     gcc11
     valgrind
-    #jdk17
-    #maven
+    jdk17
+    maven
     gnumake
     cmake
-    #python3
-    #jetbrains.idea-community
-    #vscode
-    #google-chrome
-    #nextcloud-client
+    python3
+    jetbrains.idea-community
+    vscode
+    google-chrome
+    nextcloud-client
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
