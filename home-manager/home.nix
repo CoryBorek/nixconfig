@@ -40,7 +40,14 @@
     gcc11
     valgrind
     jdk17
-    gnome
+    maven
+    gnumake
+    cmake
+    python3
+    jetbrains.idea-community
+    vscode
+    ungoogled-chromium
+
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

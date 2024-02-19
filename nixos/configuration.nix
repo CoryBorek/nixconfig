@@ -79,8 +79,14 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh.enable = false;
   services.qemuGuest.enable = true;
+
+  # Enable GNOME Desktop
+  services.xserver.enable = true;
+  services.xserver.dispalyManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+ 
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
