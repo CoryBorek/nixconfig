@@ -15,16 +15,30 @@
   in
   {
     nixosConfigurations = {
-      cory = nixpkgs.lib.nixosSystem {
+      regular = nixpkgs.lib.nixosSystem {
         inherit system;
 	modules = [
-          ./nixos/configuration.nix
+          ./regular/nixos/configuration.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
               useUserPackages = true;
 	      useGlobalPkgs = true;
-	      users.cory = ./home-manager/home.nix;
+	      users.cory = ./regular/home-manager/cory.nix;
+            };
+          }
+        ];
+      };
+      term = nixpkgs.lib.nixosSystem {
+        inherit system;
+	modules = [
+          ./term/nixos/configuration.nix
+	  home-manager.nixosModules.home-manager
+	  {
+            home-manager = {
+              useUserPackages = true;
+	      useGlobalPkgs = true;
+	      users.cory = ./term/home-manager/cory.nix;
             };
           }
         ];

@@ -35,7 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     # htop
-    emacs-nox
+    emacs
     git
     gcc11
     valgrind
@@ -79,7 +79,7 @@
   #  /etc/profiles/per-user/cory/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    DITOR = "emacs";
+    DITOR = "emacs -nw";
   };
 
   # Let Home Manager install and manage itself.
