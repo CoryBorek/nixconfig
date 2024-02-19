@@ -44,10 +44,10 @@
     gnumake
     cmake
     python3
-   # jetbrains.idea-community
-   # vscode
-   # ungoogled-chromium
-   #  nextcloud-client
+    jetbrains.idea-community
+    vscode
+    google-chrome
+    nextcloud-client
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
