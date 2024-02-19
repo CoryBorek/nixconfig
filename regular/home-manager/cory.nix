@@ -79,7 +79,7 @@
   #  /etc/profiles/per-user/cory/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    DITOR = "emacs -nw";
+    EDITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.
