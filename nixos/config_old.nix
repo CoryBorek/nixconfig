@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -53,9 +52,7 @@
     isNormalUser = true;
     description = "Cory Borek";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      git
-    ];
+    packages = with pkgs; [];
   };
 
   # Allow unfree packages
@@ -79,7 +76,14 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  #services.openssh.enable = true;
+  # services.qemuGuest.enable = true;
+
+  # Enable GNOME Desktop
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+ 
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

@@ -35,7 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     # htop
-    emacs
+    emacs-nox
     git
     gcc11
     valgrind
@@ -46,7 +46,7 @@
     python3
     # jetbrains.idea-community
     # vscode
-    google-chrome
+    # google-chrome
     # nextcloud-client
   ];
 
