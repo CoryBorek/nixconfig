@@ -65,7 +65,6 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-     micro
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -79,13 +78,13 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = false;
-  services.qemuGuest.enable = true;
+  services.openssh.enable = true;
+  # services.qemuGuest.enable = true;
 
   # Enable GNOME Desktop
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
  
 
   # Open ports in the firewall.

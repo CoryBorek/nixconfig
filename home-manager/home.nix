@@ -44,10 +44,10 @@
     gnumake
     cmake
     python3
-    jetbrains.idea-community
-    vscode
-    ungoogled-chromium
-
+   # jetbrains.idea-community
+   # vscode
+   # ungoogled-chromium
+   #  nextcloud-client
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -77,7 +77,7 @@
   #  /etc/profiles/per-user/cory/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    DITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.
