@@ -39,7 +39,7 @@
     git
     gcc11
     valgrind
-    jdk-17
+    jdk17
     gnome
   ];
 
