@@ -35,19 +35,19 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     # htop
-    emacs-nox
+    emacs
     git
     gcc11
     valgrind
-    # jdk17
+    jdk17
     maven
     gnumake
     cmake
     python3
-    # jetbrains.idea-community
-    # vscode
-    # google-chrome
-    # nextcloud-client
+    jetbrains.idea-community
+    vscode
+    google-chrome
+    nextcloud-client
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

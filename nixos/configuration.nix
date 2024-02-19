@@ -68,6 +68,7 @@
   #  wget
   ];
 
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -81,6 +82,11 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+
+  # Enable GNOME Desktop
+    services.xserver.enable = true;
+    services.xserver.displayManager.gdm.enable = true;
+    services.xserver.desktopManager.gnome.enable = true;
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
