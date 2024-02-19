@@ -37,20 +37,20 @@
     # htop
     emacs
     git
-    gcc11
-    valgrind
-    #jdk17
-    #maven
-    gnumake
+    #gcc11
+    #valgrind
+    jdk17
+    maven
+    #gnumake
     #cmake
     #python3
     #jetbrains.idea-community
-    #vscode
-    #google-chrome
+    vscode
+    google-chrome
     #nextcloud-client
     #discord
     #prismlauncher-unwrapped
-    #xclip
+    xclip
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
