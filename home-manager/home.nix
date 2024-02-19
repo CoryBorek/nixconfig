@@ -35,7 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     # htop
-    emacs-nw
+    emacs-nox
     git
     gcc11
     valgrind
