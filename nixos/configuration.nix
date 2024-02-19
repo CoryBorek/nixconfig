@@ -84,7 +84,7 @@
 
   # Enable GNOME Desktop
   services.xserver.enable = true;
-  services.xserver.dispalyManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
  
 
