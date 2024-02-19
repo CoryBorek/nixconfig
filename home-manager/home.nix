@@ -49,7 +49,7 @@
     google-chrome
     nextcloud-client
     discord
-    minecraft
+    prismlauncher-unwrapped
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
