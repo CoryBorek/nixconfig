@@ -37,6 +37,10 @@
     htop
     emacs-nox
     git
+    gcc11
+    valgrind
+    jdk-17
+    gnome
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
