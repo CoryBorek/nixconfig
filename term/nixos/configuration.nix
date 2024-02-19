@@ -53,9 +53,7 @@
     isNormalUser = true;
     description = "Cory Borek";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      git
-    ];
+    packages = with pkgs; [];
   };
 
   # Allow unfree packages
@@ -84,9 +82,10 @@
 
 
   # Enable GNOME Desktop
-    services.xserver.enable = true;
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
+  #  services.xserver.enable = true;
+  #  services.xserver.displayManager.gdm.enable = true;
+  #  services.xserver.desktopManager.gnome.enable = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
