@@ -34,20 +34,20 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    htop
-    emacs-nox
+    # htop
+    emacs
     git
     gcc11
     valgrind
-    jdk17
+    # jdk17
     maven
     gnumake
     cmake
     python3
-    jetbrains.idea-community
-    vscode
+    # jetbrains.idea-community
+    # vscode
     google-chrome
-    nextcloud-client
+    # nextcloud-client
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
