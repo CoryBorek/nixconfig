@@ -49,7 +49,7 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.cory = {
+  users.users.cborek = {
     isNormalUser = true;
     description = "Cory Borek";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -85,8 +85,8 @@
 
   # Enable GNOME Desktop
     services.xserver.enable = true;
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
+    services.xserver.displayManager.lightdm.enable = true;
+    services.xserver.desktopManager.cinnamon.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

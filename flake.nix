@@ -24,9 +24,15 @@
             home-manager = {
               useUserPackages = true;
 	      useGlobalPkgs = true;
-	      users.cory = ./regular/home-manager/cory.nix;
+	      users.cborek = ./regular/home-manager/cory.nix;
             };
           }
+        ];
+      };
+      default = nixpkgs.lib.nixosSystem {
+        inherit system;
+	modules = [
+          ./default/configuration.nix
         ];
       };
       term = nixpkgs.lib.nixosSystem {
@@ -38,7 +44,7 @@
             home-manager = {
               useUserPackages = true;
 	      useGlobalPkgs = true;
-	      users.cory = ./term/home-manager/cory.nix;
+	      users.cborek = ./term/home-manager/cory.nix;
             };
           }
         ];
