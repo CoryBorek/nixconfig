@@ -50,6 +50,8 @@
     nextcloud-client
     discord
     prismlauncher-unwrapped
+    obs-studio
+    gimp
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
