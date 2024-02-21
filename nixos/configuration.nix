@@ -9,39 +9,50 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
   time.hardwareClockInLocalTime = true;
   # Bootloader.
   boot = {
+    kernelParams = ["nohibernate"];
+    tmp.cleanOnBoot = true;
+    supportedFilesystems = ["ntfs"];
     loader = {
-      efi = {
-        canTouchEfiVariables = true;
-      	efiSysMountPoint = "/boot";
-      };
+      efi.canTouchEfiVariables = true;
       grub = {
-        devices = [ "nodev" ];
-        efiSupport=  true;
+        device = "nodev";
+        efiSupport = true;
         enable = true;
         useOSProber = true;
-        version = 2;
+        timeoutStyle = "menu";
       };
+      timeout = 300;
     };
   };
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+
+ networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+    enableIPv6 = true;
+    firewall.enable = true;
+  };
+   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
-
+  
   # Set your time zone.
   time.timeZone = "America/New_York";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
+  console = {
+    packages = [pkgs.terminus_font];
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-i22b.psf.gz";
+    useXkbConfig = true;
+  };
+  
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -54,20 +65,54 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+  services = {
+    flatpak.enable = false;
+    dbus.enable = true;
+    picom.enable = false;
   };
-
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cborek = {
     isNormalUser = true;
     description = "Cory Borek";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "flatpak"
+      "disk"
+      "qemu"
+      "kvm"
+      "libvirtd"
+      "sshd"
+      "networkmanager"
+      "wheel"
+      "audio"
+      "video"
+      "libvirtd"
+      "root"
+    ];
     packages = with pkgs; [
       git
     ];
+  };
+
+fonts = {
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      font-awesome
+      source-han-sans
+      source-han-sans-japanese
+      source-han-serif-japanese
+      (nerdfonts.override {fonts = ["Meslo"];})
+    ];
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = ["Meslo LG M Regular Nerd Font Complete Mono"];
+        serif = ["Noto Serif" "Source Han Serif"];
+        sansSerif = ["Noto Sans" "Source Han Sans"];
+      };
+    };
   };
   
   # Allow unfree packages
@@ -78,7 +123,6 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-    wireguard-tools
   ];
 
 
@@ -93,13 +137,6 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-
-  # Enable GNOME Desktop
-    services.xserver.enable = true;
-    services.xserver.displayManager.lightdm.enable = true;
-    services.xserver.desktopManager.cinnamon.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -114,5 +151,16 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
+  nix.optimise.automatic = true;
+  nix.settings.auto-optimise-store = true;
+
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 1d";
+};
+
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
 }
