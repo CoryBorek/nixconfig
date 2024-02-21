@@ -50,6 +50,38 @@
           }
         ];
       };
+      dev-java = nixpkgs.lib.nixosSystem {
+        inherit system;
+	modules = [
+	  ./nixos/configuration.nix
+  	  ./views/cinnamon.nix
+	  ./development/os.nix
+	  home-manager.nixosModules.home-manager
+	  {
+            home-manager = {
+              useUserPackages = true;
+	      useGlobalPkgs = true;
+	      users.cborek = ./development/java/cory.nix;
+            };
+          }
+        ];
+      };
+      dev-c = nixpkgs.lib.nixosSystem {
+        inherit system;
+	modules = [
+	  ./nixos/configuration.nix
+  	  ./views/cinnamon.nix
+	  ./development/os.nix
+	  home-manager.nixosModules.home-manager
+	  {
+            home-manager = {
+              useUserPackages = true;
+	      useGlobalPkgs = true;
+	      users.cborek = ./development/c/cory.nix;
+            };
+          }
+        ];
+      };
     };
   };
 }
