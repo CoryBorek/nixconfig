@@ -37,15 +37,6 @@
     # htop
     emacs
     git
-    gcc11
-    valgrind
-    jdk17
-    maven
-    gnumake
-    cmake
-    python3
-    jetbrains.idea-community
-    vscode
     google-chrome
     nextcloud-client
     discord
