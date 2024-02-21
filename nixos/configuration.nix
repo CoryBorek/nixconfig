@@ -27,6 +27,7 @@
       };
       timeout = 300;
     };
+  };
 
 
  networking = {

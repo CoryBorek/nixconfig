@@ -18,7 +18,8 @@
       regular = nixpkgs.lib.nixosSystem {
         inherit system;
 	modules = [
-          ./nixos/configuration.nix
+	  ./nixos/configuration.nix
+  	  ./views/cinnamon.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
@@ -27,7 +28,6 @@
 	      users.cborek = ./regular/home-manager/cory.nix;
             };
           }
-	  ./regular/window.nix
         ];
       };
       default = nixpkgs.lib.nixosSystem {
