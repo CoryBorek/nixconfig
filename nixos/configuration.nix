@@ -163,4 +163,6 @@ fonts = {
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  hardware.opengl.enable = true;
+
 }
