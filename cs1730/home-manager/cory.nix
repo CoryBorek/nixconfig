@@ -36,10 +36,13 @@
     # '')
     # htop
     emacs
-    gcc-11.2.0
-    valgrind-3.20.0
-    gdb-9.2
-    google-chrome
+    gcc11
+    valgrind
+    gdb
+    curl
+    htop
+    nano
+    tree
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

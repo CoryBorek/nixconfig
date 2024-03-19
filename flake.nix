@@ -54,7 +54,6 @@
         inherit system;
 	modules = [
 	  ./nixos/configuration.nix
-  	  ./views/cinnamon.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
