@@ -43,6 +43,7 @@
     htop
     nano
     tree
+    gnumake
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -72,7 +73,7 @@
   #  /etc/profiles/per-user/cory/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "emacs";
+    EDITOR = "emacs -nw";
   };
 
   # Let Home Manager install and manage itself.
