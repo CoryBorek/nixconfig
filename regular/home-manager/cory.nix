@@ -35,14 +35,15 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     # htop
+    audacity
     emacs
     git
     google-chrome
     nextcloud-client
     discord
-    prismlauncher-unwrapped
     obs-studio
     gimp
+    prismlauncher
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -1,0 +1,12 @@
+{ config, pkgs, ... }:
+{
+
+services.xserver = {
+  enable = true;
+  layout = "us";
+  displayManager = {
+    lightdm.enable = true;
+  };
+  desktopManager.gnome.enable = true;
+};
+}
