@@ -6,6 +6,6 @@
 
 {
  networking = {
-    hostname = "cs1730"
+    hostname = "cs1730";
   };
 }
