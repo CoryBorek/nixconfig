@@ -15,7 +15,7 @@
   in
   {
     nixosConfigurations = {
-      regular = nixpkgs.lib.nixosSystem {
+      default = nixpkgs.lib.nixosSystem {
         inherit system;
 	modules = [
 	  ./nixos/configuration.nix
@@ -28,12 +28,6 @@
 	      users.cborek = ./regular/home-manager/cory.nix;
             };
           }
-        ];
-      };
-      default = nixpkgs.lib.nixosSystem {
-        inherit system;
-	modules = [
-          ./default/configuration.nix
         ];
       };
       term = nixpkgs.lib.nixosSystem {
