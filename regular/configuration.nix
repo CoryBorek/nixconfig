@@ -6,6 +6,6 @@
 
 {
  networking = {
-    hostname = "nixos-desktop";
+    hostName = "nixos-desktop";
   };
 }

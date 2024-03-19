@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
- networking = {
-    hostname = "cs1730";
+  networking = {
+    hostName = "cs1730";
   };
 }
