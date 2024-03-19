@@ -35,23 +35,19 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     # htop
+    audacity
     emacs
     git
-    gcc11
-    valgrind
-    jdk17
-    maven
-    gnumake
-    cmake
-    python3
+    google-chrome
+    nextcloud-client
+    discord
+    obs-studio
+    gimp
+    prismlauncher
     starship
-    #jetbrains.idea-community
-    #vscode
-    #google-chrome
-    #nextcloud-client
-    #discord
-    #prismlauncher-unwrapped
+    kitty
   ];
+
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -80,7 +76,7 @@
   #  /etc/profiles/per-user/cory/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "emacs -nw";
+    EDITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.

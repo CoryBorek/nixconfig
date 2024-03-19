@@ -19,8 +19,8 @@
         inherit system;
 	modules = [
 	  ./nixos/configuration.nix
-  	  ./views/cinnamon.nix
-          ./regular/configuration.nix
+  	  ./regular/configuration.nix
+	  ./modules/global/desktop.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
@@ -29,7 +29,7 @@
 	      users.cborek = ./regular/home-manager/cory.nix;
             };
           }
-        ];
+	];
       };
       nixos-term = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -50,13 +50,13 @@
         inherit system;
 	modules = [
 	  ./nixos/configuration.nix
-          ./cs1730/configuration.nix
+          ./dev/classes/cs1730/configuration.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
               useUserPackages = true;
 	      useGlobalPkgs = true;
-	      users.cborek = ./cs1730/home-manager/cory.nix;
+	      users.cborek = ./dev/classes/cs1730/home-manager/cory.nix;
             };
           }
         ];

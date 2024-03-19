@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "cborek";
-  home.homeDirectory = "/home/cborek";
+  home.username = "cory";
+  home.homeDirectory = "/home/cory";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -37,14 +37,13 @@
     # htop
     emacs
     git
-    gcc11
-    valgrind
-    jdk17
-    maven
-    gnumake
-    cmake
-    python3
-    starship
+    #gcc11
+    #valgrind
+    #jdk17
+    #maven
+    #gnumake
+    #cmake
+    #python3
     #jetbrains.idea-community
     #vscode
     #google-chrome
@@ -80,7 +79,7 @@
   #  /etc/profiles/per-user/cory/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "emacs -nw";
+    DITOR = "emacs -nw";
   };
 
   # Let Home Manager install and manage itself.

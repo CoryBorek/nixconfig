@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
- networking = {
-    hostName = "nixos-term";
+  networking = {
+    hostName = "cs1730";
   };
 }
