@@ -6,6 +6,6 @@
 
 {
  networking = {
-    hostname = "nixos-desktop"
+    hostname = "cs1730"
   };
 }

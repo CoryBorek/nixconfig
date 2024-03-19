@@ -15,11 +15,12 @@
   in
   {
     nixosConfigurations = {
-      default = nixpkgs.lib.nixosSystem {
+      nixos-desktop = nixpkgs.lib.nixosSystem {
         inherit system;
 	modules = [
 	  ./nixos/configuration.nix
   	  ./views/cinnamon.nix
+          ./regular/configuration.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
@@ -30,10 +31,11 @@
           }
         ];
       };
-      term = nixpkgs.lib.nixosSystem {
+      nixos-term = nixpkgs.lib.nixosSystem {
         inherit system;
 	modules = [
           ./nixos/configuration.nix
+          ./term/configuration.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
@@ -48,6 +50,7 @@
         inherit system;
 	modules = [
 	  ./nixos/configuration.nix
+          ./cs1730/configuration.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
