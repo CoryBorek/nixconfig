@@ -26,7 +26,7 @@
             home-manager = {
               useUserPackages = true;
 	      useGlobalPkgs = true;
-	      users.cborek = ./regular/home-manager/cory.nix;
+	      users.cborek = ./hosts/regular/home-manager/cory.nix;
             };
           }
 	];
@@ -42,7 +42,7 @@
             home-manager = {
               useUserPackages = true;
 	      useGlobalPkgs = true;
-	      users.cborek = ./term/home-manager/cory.nix;
+	      users.cborek = ./hosts/term/home-manager/cory.nix;
             };
           }
         ];
