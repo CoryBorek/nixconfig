@@ -8,8 +8,15 @@ in {
 
 config = mkIf cfg.enable {
 
+  programs.bash.bashrcExtra = ``
+  if [! -z ${DISPLAY+x} ]; then
 
-  home.file.".bashrc" = ./bashrc.bash;
-
+	EDITOR="emacs"
+	eval "$(starship init bash)"
+  else
+	EDITOR="emacs -nw"
+	alias emacs="emacs -nw"
+  fi
+``;
 };
 }
