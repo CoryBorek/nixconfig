@@ -8,19 +8,13 @@ let
 in {
 
 
-config = if cfg.enable
-then {
+config = {
 
-  programs.bash.bashrcExtra = "
+programs.bash.bashrcExtra = if cfg.enable
+then  "
       EDITOR=\"emacs\"\n
       eval \"$(starship init bash)\"\n
-";
-}
-else {
- programs.bash.bashrcExtra = "
-    EDITOR=\"emacs -nw\"\n
-    ";
-
+"
+else "EDITOR=\"emacs -nw\"\n";
 };
-
 }
