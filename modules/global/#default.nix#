@@ -8,7 +8,22 @@ with lib;
   imports = [
     ./views/cinnamon.nix
   ];
+{ pkgs, config, lib, ... }:
+with lib;
+{
 
+  options = {
+    display.enable = mkEnableOption "Enables Display";
+  };
+  imports = [
+    ./views/cinnamon.nix
+  ];
+
+  config = {
+    services.cinnamon.enable = mkDefault false;
+    display.enable = mkDefault false;
+  };
+}
   config = {
     services.cinnamon.enable = mkDefault false;
     display.enable = mkDefault false;

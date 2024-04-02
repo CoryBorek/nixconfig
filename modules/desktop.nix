@@ -7,5 +7,5 @@
   programs.emacs.enable = true;
   programs.kitty.enable = true;
   programs.starship.enable = true;
-  display.enable = true;
+  config.display.enable = true;
 }
