@@ -11,4 +11,5 @@
   programs.emacs.enable = lib.mkDefault true;
   programs.kitty.enable = lib.mkDefault false;
   programs.starship.enable = lib.mkDefault false;
+  display.enable = lib.mkDefault false;
 }

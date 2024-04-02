@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [
+    ../../../modules/desktop.nix
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "cborek";
@@ -35,7 +39,6 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     # htop
-    emacs
     git
     gcc11
     valgrind
@@ -44,13 +47,7 @@
     gnumake
     cmake
     python3
-    starship
-    #jetbrains.idea-community
-    #vscode
-    #google-chrome
-    #nextcloud-client
-    #discord
-    #prismlauncher-unwrapped
+    tree
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -79,9 +76,6 @@
   #
   #  /etc/profiles/per-user/cory/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "emacs -nw";
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
