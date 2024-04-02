@@ -44,6 +44,7 @@
     gnumake
     cmake
     python3
+    starship
     #jetbrains.idea-community
     #vscode
     #google-chrome
