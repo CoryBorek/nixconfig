@@ -1,0 +1,14 @@
+{ lib, ... }: {
+
+  imports = [
+    ./editor/emacs.nix
+    ./term/kitty.nix
+    ./term/starship.nix
+    ./views/cinnamon.nix
+  ];
+
+  programs.emacs.enable = lib.mkDefault true;
+  programs.kitty.enable = lib.mkDefault false;
+  programs.starship.enable = lib.mkDefault false;
+  services.cinnamon.enable = lib.mkDefault false;
+}
