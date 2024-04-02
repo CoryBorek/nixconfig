@@ -19,7 +19,7 @@
         inherit system;
 	modules = [
 	  ./nixos/configuration.nix
-  	  ./regular/configuration.nix
+  	  ./hosts/regular/configuration.nix
 	  ./modules/global/desktop.nix
 	  home-manager.nixosModules.home-manager
 	  {
@@ -35,7 +35,8 @@
         inherit system;
 	modules = [
           ./nixos/configuration.nix
-          ./term/configuration.nix
+          ./hosts/term/configuration.nix
+	  ./modules/global/default.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {

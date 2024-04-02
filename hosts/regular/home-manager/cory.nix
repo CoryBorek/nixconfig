@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
+
+  imports = [
+    ../../../modules/desktop.nix
+  ];
+# Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "cborek";
   home.homeDirectory = "/home/cborek";
@@ -36,7 +40,6 @@
     # '')
     # htop
     audacity
-    emacs
     git
     google-chrome
     nextcloud-client
@@ -44,9 +47,8 @@
     obs-studio
     gimp
     prismlauncher
-    starship
-    kitty
   ];
+
 
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -75,9 +77,6 @@
   #
   #  /etc/profiles/per-user/cory/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "emacs";
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
