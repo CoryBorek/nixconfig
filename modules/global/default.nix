@@ -1,8 +1,17 @@
-{ lib, ... }: {
+{ pkgs, config, lib, ... }:
+with lib;
 
+in {
+
+  options = {
+    display.enable = mkEnableOption "Enables Display"
+  };
   imports = [
     ./views/cinnamon.nix
   ];
 
-  config.services.cinnamon.enable = lib.mkDefault false;
+  config = {
+    servives.cinnamon.enable = mkDefault false;
+    display.enable = mkDefault false;
+  };
 }

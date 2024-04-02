@@ -1,16 +1,11 @@
 { pkgs, lib, config, ... }:
 with lib;
 
-let
-  cfg = config.services.xserver;
-  
-
 in {
-
 
 config = {
 
-programs.bash.bashrcExtra = if cfg.enable
+programs.bash.bashrcExtra = if config.display.enable
 then  "
       EDITOR=\"emacs\"\n
       eval \"$(starship init bash)\"\n
