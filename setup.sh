@@ -14,7 +14,7 @@ then
     cp ./nixos/config-grub.nix ./nixos/config-boot.nix
 else
     cp ./nixos/config-efi.nix ./nixos/config-boot.nix
-
+fi
 git add -A
 git commit -m "build"
 
