@@ -8,27 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./config-boot.nix
     ];
  
   time.hardwareClockInLocalTime = true;
-  # Bootloader.
-  boot = {
-    kernelParams = ["nohibernate"];
-    tmp.cleanOnBoot = true;
-    supportedFilesystems = ["ntfs"];
-    loader = {
-      efi.canTouchEfiVariables = true;
-      grub = {
-        device = "nodev";
-        efiSupport = true;
-        enable = true;
-        useOSProber = true;
-        timeoutStyle = "menu";
-      };
-      timeout = 300;
-    };
-  };
-
 
  networking = {
     networkmanager.enable = true;
