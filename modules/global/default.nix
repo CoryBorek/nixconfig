@@ -1,7 +1,6 @@
 { pkgs, config, lib, ... }:
 with lib;
-
-in {
+{
 
   options = {
     config.display.enable = mkEnableOption "Enables Display"
