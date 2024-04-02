@@ -1,5 +1,4 @@
 #!/bin/bash
-iatest=$(expr index "$-" i)
 
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me

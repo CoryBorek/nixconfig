@@ -48,8 +48,6 @@
     obs-studio
     gimp
     prismlauncher
-    starship
-    kitty
   ];
 
 

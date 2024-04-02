@@ -4,5 +4,5 @@
     ./views/cinnamon.nix
   ];
 
-  services.cinnamon.enable = lib.mkDefault false;
+  config.services.cinnamon.enable = lib.mkDefault false;
 }

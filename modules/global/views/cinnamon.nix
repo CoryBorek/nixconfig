@@ -5,7 +5,7 @@ let
   cfg = config.services.cinnamon;
 in {
 
-  options.services.cfg = {
+  options.services.cinnamon = {
 
    enable = mkEnableOption "Cinnamon Desktop Environment";
   };
