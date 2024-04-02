@@ -7,7 +7,6 @@ let
 in {
   options.programs.emacs = {
     enable = mkEnableOption "Enable Emacs";
-
   };
 
 
@@ -17,7 +16,7 @@ config = mkIf cfg.enable {
     enable = true;
   };
 
-  home.file.".config/emacs/init.el" = ./init.el
+  home.file.".config/emacs/init.el" = ./init.el;
 
 };
 }

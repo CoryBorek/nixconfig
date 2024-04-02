@@ -20,6 +20,7 @@
 	modules = [
 	  ./nixos/configuration.nix
   	  ./regular/configuration.nix
+	  ./modules/global/desktop.nix
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager = {
@@ -28,8 +29,7 @@
 	      users.cborek = ./regular/home-manager/cory.nix;
             };
           }
-	  ./modules/desktop.nix
-        ];
+	];
       };
       nixos-term = nixpkgs.lib.nixosSystem {
         inherit system;

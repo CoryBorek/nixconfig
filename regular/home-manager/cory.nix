@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
+
+  imports = [
+    ../../modules/desktop.nix
+  ];
+# Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "cborek";
   home.homeDirectory = "/home/cborek";
@@ -47,6 +51,7 @@
     starship
     kitty
   ];
+
 
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

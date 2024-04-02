@@ -17,7 +17,8 @@ config = mkIf cfg.enable {
     enable = true;
   };
 
-  home.file.".config/starship.toml" = ./starship.toml
+  home.file.".config/starship.toml" = ./starship.toml;
+  
 
 };
 }

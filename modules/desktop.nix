@@ -10,5 +10,4 @@
   programs.emacs.enable = lib.mkDefault true;
   programs.kitty.enable = lib.mkDefault true;
   programs.starship.enable = lib.mkDefault true;
-  services.cinnamon.enable = lib.mkDefault true;
 }
