@@ -3,7 +3,7 @@ with lib;
 {
 
   options = {
-    config.display.enable = mkEnableOption "Enables Display"
+    display.enable = mkEnableOption "Enables Display";
   };
   imports = [
     ./views/cinnamon.nix

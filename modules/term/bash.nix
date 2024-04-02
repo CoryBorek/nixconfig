@@ -1,10 +1,5 @@
 { pkgs, lib, config, ... }:
 {
-
-  options = {
-    display.enable = lib.mkEnableOption "enables display for bash";
-  };
-  
   config = {
 
     programs.bash.bashrcExtra =

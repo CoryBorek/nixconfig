@@ -1,9 +1,9 @@
 { lib, ... }: {
 
   imports = [
-
-    ./views/cinnamon.nix
+    ./default.nix
   ];
 
   config.services.cinnamon.enable = true;
+  config.display.enable = true;
 }
