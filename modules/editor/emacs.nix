@@ -11,7 +11,7 @@ config = mkIf cfg.enable {
 
   programs.emacs = {
 
-  extraConfig  ''
+  extraConfig = ''
   ;;; Personal configuration -*- lexical-binding: t -*-
 
 ;; Save the contents of this file under ~/.emacs.d/init.el

@@ -2,20 +2,25 @@
 with lib;
 
 let
-  cfg = config.programs.bash;
+  cfg = config.services.xserver;
+  
 
 in {
 
-config = mkIf cfg.enable {
+
+config = if cfg.enable
+then {
 
   programs.bash.bashrcExtra = "
-  if [! -z ${DISPLAY+x} ]; then\n
       EDITOR=\"emacs\"\n
       eval \"$(starship init bash)\"\n
-  else\n
-	EDITOR=\"emacs -nw\"\n
-	alias emacs=\"emacs -nw\"\n
-  fi\n
 ";
+}
+else {
+ programs.bash.bashrcExtra = "
+    EDITOR=\"emacs -nw\"\n
+    ";
+
 };
+
 }
