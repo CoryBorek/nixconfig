@@ -21,7 +21,7 @@ git checkout -B build
 cp /etc/nixos/hardware-configuration.nix ./nixos/
 
 #rm ./nixos/config-boot.nix
-if [ -f /boot/EFI ]
+if [ -e /boot/EFI ]
 then
     if [ -f /boot/grub/grub.cfg ]
     then
