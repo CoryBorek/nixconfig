@@ -47,6 +47,22 @@
           }
         ];
       };
+      nixos-dev = nixpkgs.lib.nixosSystem {
+        inherit system;
+	modules = [
+	  ./nixos/configuration.nix
+  	  ./hosts/dev/configuration.nix
+	  ./modules/global/desktop.nix
+	  home-manager.nixosModules.home-manager
+	  {
+            home-manager = {
+              useUserPackages = true;
+	      useGlobalPkgs = true;
+	      users.cborek = ./hosts/dev/home-manager/cory.nix;
+            };
+          }
+	];
+      };
     };
   };
 }
