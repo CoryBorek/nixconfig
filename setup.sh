@@ -5,22 +5,18 @@
 echo "Setting up Hardware Configuration from default."
 
 
-USERNAME=git config --global user.name
-EMAIL=git config --global user.email
-NUSER="NixOS User"
-NEMAIL="user@example.com"
-
-[[ "$($USERNAME)" =~ $NUSER ]] && $USERNAME $NUSER
-[[ "$($EMAIL)" =~ $NEMAIL ]] && $EMAIL $NEMAIL
-
+if [ ! -f ~/.gitconfig ]
+then
+    git config --global user.name "NixOS user"
+    git config --global user.email "user@example.com"
+fi
 git checkout -B build
 #rm ./nixos/hardware-configuration.nix
 cp /etc/nixos/hardware-configuration.nix ./nixos/
 
 #rm ./nixos/config-boot.nix
 if [ -f /boot/EFI ]
-   the
-   n
+then
     if [ -f /boot/grub/grub.cfg ]
     then
 	cp ./nixos/config-grub.nix ./nixos/config-boot.nix
