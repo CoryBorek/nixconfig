@@ -9,12 +9,18 @@ git checkout -B build
 cp /etc/nixos/hardware-configuration.nix ./nixos/
 
 #rm ./nixos/config-boot.nix
-if [ -f /boot/grub/grub.cfg ]
+if [ -f /boot/EFI ]
 then
-    cp ./nixos/config-grub.nix ./nixos/config-boot.nix
+    if [ -f /boot/grub/grub.cfg ]
+    then
+	cp ./nixos/config-grub.nix ./nixos/config-boot.nix
+    else
+	cp ./nixos/config-efi.nix ./nixos/config-boot.nix
+    fi
 else
-    cp ./nixos/config-efi.nix ./nixos/config-boot.nix
+    cp ./nixos/config-vm.nix ./nixos/config-boot.nix
 fi
+
 git add -A
 git commit -m "build"
 
