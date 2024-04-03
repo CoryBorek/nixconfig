@@ -5,6 +5,12 @@
 echo "Setting up Hardware Configuration from default."
 
 
+FLAKE=$1
+
+if [ $# -eq 0 ]
+then
+    FLAKE=nixos-term
+fi
 if [ ! -f ~/.gitconfig ]
 then
     git config --global user.name "NixOS user"
@@ -30,4 +36,4 @@ fi
 git add -A
 git commit -m "build"
 
-sudo nixos-rebuild switch --flake .#$1
+sudo nixos-rebuild switch --flake .#$FLAKE
