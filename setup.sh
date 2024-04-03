@@ -34,4 +34,4 @@ fi
 git add -A
 git commit -m "build"
 
-sudo nixos-rebuild switch --flake .#nixos-term
+sudo nixos-rebuild switch --flake .#$1
