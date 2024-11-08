@@ -52,30 +52,6 @@
     dbus.enable = true;
     picom.enable = false;
   };
-  
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.cborek = {
-    isNormalUser = true;
-    description = "Cory Borek";
-    extraGroups = [
-      "flatpak"
-      "disk"
-      "qemu"
-      "docker"
-      "kvm"
-      "libvirtd"
-      "sshd"
-      "networkmanager"
-      "wheel"
-      "audio"
-      "video"
-      "libvirtd"
-      "root"
-    ];
-    packages = with pkgs; [
-      git
-    ];
-  };
 
 fonts = {
     packages = with pkgs; [

@@ -81,5 +81,7 @@
   #
 
   # Let Home Manager install and manage itself.
+  programs.kitty.enable = true;
+  programs.starship.enable = true;
   programs.home-manager.enable = true;
 }

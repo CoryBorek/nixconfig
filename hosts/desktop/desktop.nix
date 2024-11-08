@@ -8,4 +8,25 @@
  networking = {
     hostName = "nixos-desktop";
   };
+
+users.users.cborek = {
+    isNormalUser = true;
+    description = "Cory Borek";
+    extraGroups = [
+      "flatpak"
+      "disk"
+      "qemu"
+      "docker"
+      "kvm"
+      "libvirtd"
+      "sshd"
+      "networkmanager"
+      "wheel"
+      "audio"
+      "video"
+      "libvirtd"
+      "root"
+    ];
+    initialPassword = "changeme";
+  };
 }
