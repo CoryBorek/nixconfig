@@ -44,3 +44,8 @@ mkShell {
         buildInputs = [ gcc valgrind gdb gnumake ];
 }
 ```
+
+# Common utilizations
+
+I'm using home-manager for user-specific programs, though I only have one user at the moment.
+I'd ideally like to have a configuration to deploy on servers if I need it.
