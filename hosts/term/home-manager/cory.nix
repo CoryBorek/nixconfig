@@ -40,6 +40,7 @@
     # '')
     htop
     git
+    gh
     tree
     wget
     curl
