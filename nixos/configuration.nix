@@ -61,6 +61,7 @@
       "flatpak"
       "disk"
       "qemu"
+      "docker"
       "kvm"
       "libvirtd"
       "sshd"
