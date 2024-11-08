@@ -6,6 +6,6 @@
 
 {
  networking = {
-    hostName = "nixos-dev";
+    hostName = "nixos-kde-desktop";
   };
 }

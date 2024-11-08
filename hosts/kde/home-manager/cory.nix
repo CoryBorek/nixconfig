@@ -17,7 +17,7 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "23.11"; # Please read the comment before changing.
+  home.stateVersion = "24.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -42,21 +42,12 @@
     audacity
     git
     google-chrome
+    brave
     nextcloud-client
     discord
     obs-studio
     gimp
     prismlauncher
-    jetbrains.idea-community
-    vscode
-    jdk21
-    gcc11
-    valgrind
-    gnumake
-    cmake
-    maven
-    python3
-    gdb
   ];
 
 
