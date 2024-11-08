@@ -14,7 +14,7 @@ config = mkIf cfg.enable {
 
 services.xserver = {
   enable = true;
-  layout = "us";
+  xkb.layout = "us";
   displayManager = {
     lightdm.enable = true;
   };
