@@ -4,8 +4,6 @@
 
   imports = [
     ../../../modules/desktop.nix
-    ../../../modules/browser/chromium.nix
-    ../../../modules/browser/firefox.nix
   ];
 # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -45,6 +43,7 @@
     git
     gh
     vscode
+    chromium
     nextcloud-client
     discord
     obs-studio
