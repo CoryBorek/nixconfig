@@ -38,16 +38,11 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    # htop
+    htop
     git
-    gcc11
-    valgrind
-    jdk17
-    maven
-    gnumake
-    cmake
-    python3
     tree
+    wget
+    curl
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
