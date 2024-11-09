@@ -29,4 +29,6 @@
     ];
     initialPassword = "changeme";
   };
+
+ # services.openssh.enable = true;
 }
