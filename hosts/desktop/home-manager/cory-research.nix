@@ -75,8 +75,7 @@
   #
 
   # Let Home Manager install and manage itself.
-  programs.kitty.enable = false;
-  programs.alacritty.enable = true;
+  programs.kitty.enable = true;
   programs.starship.enable = false;
   programs.home-manager.enable = true;
 }
