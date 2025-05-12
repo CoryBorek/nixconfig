@@ -47,6 +47,23 @@
           }
         ];
       };
+      nixos-research = nixpkgs.lib.nixosSystem {
+        inherit system;
+         modules = [
+          ./nixos/configuration.nix
+          ./hosts/desktop/research.nix
+          ./modules/global/desktop-plasma.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useUserPackages = true;
+              useGlobalPkgs = true;
+              users.cborek = ./hosts/desktop/home-manager/cory-research.nix;
+            };
+          }
+        ];
+      };
+
       nixos-term = nixpkgs.lib.nixosSystem {
         inherit system;
 	      modules = [
