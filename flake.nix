@@ -53,7 +53,6 @@
           ./nixos/configuration.nix
           ./hosts/desktop/research.nix
           ./modules/global/desktop-plasma.nix
-          ./modules/vscode-fix.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
