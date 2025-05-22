@@ -4,7 +4,6 @@
 
   imports = [
     ../../../modules/desktop.nix
-    (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
   ];
 # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -79,5 +78,4 @@
   programs.kitty.enable = true;
   programs.starship.enable = false;
   programs.home-manager.enable = true;
-  services.vscode-server.enable = true;
 }

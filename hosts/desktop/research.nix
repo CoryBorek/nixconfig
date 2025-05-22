@@ -30,5 +30,11 @@
     initialPassword = "changeme";
   };
 
- services.openssh.enable = true;
+  services.openssh.enable = true;
+
+  imports = [
+    (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
+  ];
+
+  services.vscode-server.enable = true;
 }
