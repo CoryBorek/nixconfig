@@ -4,7 +4,6 @@
 
   imports = [
     ../../../modules/desktop.nix
-    ../../../modules/nixos-vscode-ssh-fix.nix
   ];
 # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -44,6 +43,7 @@
     gh
     vscode
     chromium
+    openvscode-server
   ];
 
 
