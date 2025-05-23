@@ -44,6 +44,7 @@
     gh
     vscode
     chromium
+    screen
   ];
 
 
