@@ -51,7 +51,7 @@
     flatpak.enable = false;
     dbus.enable = true;
     picom.enable = false;
-    pulseaudio.enable = true;
+    pulseaudio.enable = false;
   };
 
 fonts = {
