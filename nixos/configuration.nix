@@ -63,12 +63,10 @@ fonts = {
       source-han-sans
       source-han-sans-japanese
       source-han-serif-japanese
-      nerdfonts.Meslo
     ];
     fontconfig = {
       enable = true;
       defaultFonts = {
-        monospace = ["Meslo LG M Regular Nerd Font Complete Mono"];
         serif = ["Noto Serif" "Source Han Serif"];
         sansSerif = ["Noto Sans" "Source Han Sans"];
       };
