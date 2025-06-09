@@ -51,12 +51,13 @@
     flatpak.enable = false;
     dbus.enable = true;
     picom.enable = false;
+    pulseaudio.enable = true;
   };
 
 fonts = {
     packages = with pkgs; [
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
       font-awesome
       source-han-sans
@@ -119,8 +120,7 @@ fonts = {
     options = "--delete-older-than 1d";
 };
 
-  hardware.pulseaudio.enable = true;
-
-  hardware.opengl.enable = true;
+ 
+  hardware.graphics.enable = true;
 
 }
