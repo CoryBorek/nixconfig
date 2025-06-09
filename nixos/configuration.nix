@@ -119,7 +119,6 @@ fonts = {
     options = "--delete-older-than 1d";
 };
 
-  sound.enable = true;
   hardware.pulseaudio.enable = true;
 
   hardware.opengl.enable = true;
