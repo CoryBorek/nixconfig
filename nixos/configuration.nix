@@ -51,7 +51,6 @@
     flatpak.enable = false;
     dbus.enable = true;
     picom.enable = false;
-    pulseaudio.enable = false;
   };
 
 fonts = {
@@ -118,7 +117,7 @@ fonts = {
     options = "--delete-older-than 1d";
 };
 
- 
+  hardware.pulseaudio.enable = false;
   hardware.graphics.enable = true;
 
 }
