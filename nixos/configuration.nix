@@ -63,7 +63,7 @@ fonts = {
       source-han-sans
       source-han-sans-japanese
       source-han-serif-japanese
-      (nerdfonts.override {fonts = ["Meslo"];})
+      nerdfonts.Meslo
     ];
     fontconfig = {
       enable = true;
