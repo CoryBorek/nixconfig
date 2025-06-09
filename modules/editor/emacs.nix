@@ -23,7 +23,9 @@ config = mkIf cfg.enable {
 ;; Add the NonGNU ELPA package archive
 (require 'package)
 (add-to-list 'package-archives  '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (unless package-archive-contents  (package-refresh-contents))
+
 
 ;; Load a custom theme
 (load-theme 'manoj-dark t)
@@ -71,6 +73,11 @@ config = mkIf cfg.enable {
 ;;; Markdown support
 (unless (package-installed-p 'markdown-mode)
   (package-install 'markdown-mode))
+
+;;; Nix support
+(unless (package-installed-p 'nix-mode)
+  (package-install 'nix-mode))
+
 
 ;; Miscellaneous options
 (setq-default major-mode
