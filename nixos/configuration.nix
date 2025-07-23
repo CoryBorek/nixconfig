@@ -13,7 +13,9 @@
  
   time.hardwareClockInLocalTime = true;
 
- networking = {
+  boot.initrd.kernelModules = [ "amdgpu" ];
+ 
+  networking = {
     networkmanager.enable = true;
     enableIPv6 = true;
     firewall.enable = true;
