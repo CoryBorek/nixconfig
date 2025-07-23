@@ -48,7 +48,7 @@
   };
 
   services = {
-    flatpak.enable = false;
+    flatpak.enable = true;
     dbus.enable = true;
     picom.enable = false;
   };
