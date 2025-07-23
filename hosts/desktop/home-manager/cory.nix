@@ -85,5 +85,5 @@
   programs.starship.enable = true;
   programs.home-manager.enable = true;
 
-  ervices.flatpak.enable = true;
+  services.flatpak.enable = true;
 }
