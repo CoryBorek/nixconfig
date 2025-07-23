@@ -84,4 +84,6 @@
   programs.kitty.enable = true;
   programs.starship.enable = true;
   programs.home-manager.enable = true;
+
+  ervices.flatpak.enable = true;
 }
